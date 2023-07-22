@@ -93,8 +93,18 @@ addBookBtn.addEventListener("click", function() {
     let readLabel = document.createElement("label");
     readLabel.textContent = "Have you read this book?";
 
-    let readInput = document.createElement("input");
-    readInput.type = "checkbox";
+    let toggleSwitch = document.createElement("label");
+    toggleSwitch.classList.add("toggle-switch");
+
+    let toggleInput = document.createElement("input");
+    toggleInput.type = "checkbox";
+    toggleInput.name = "read-status";
+
+    let toggleSlider = document.createElement("span");
+    toggleSlider.classList.add("toggle-slider");
+
+    toggleSwitch.appendChild(toggleInput);
+    toggleSwitch.appendChild(toggleSlider);
 
     let submitBtn = document.createElement("button");
     submitBtn.type = "submit";
@@ -104,7 +114,7 @@ addBookBtn.addEventListener("click", function() {
     form.appendChild(authorInput);
     form.appendChild(pagesInput);
     form.appendChild(readLabel);
-    form.appendChild(readInput);
+    form.appendChild(toggleSwitch);
     form.appendChild(submitBtn);
 
     overlay.appendChild(form);
@@ -115,7 +125,7 @@ addBookBtn.addEventListener("click", function() {
         let title = titleInput.value;
         let author = authorInput.value;
         let pages = pagesInput.value;
-        let read = readInput.checked;
+        let read = toggleInput.checked;
         addBookToLibrary(title, author, pages, read);
         overlay.remove();
     });
