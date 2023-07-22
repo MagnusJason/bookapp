@@ -14,68 +14,13 @@
     </header>
     
     <main id="book-list">
-        <div class="book-card">
-            <div class="book-info">
-                <h2>The Catcher in the Rye</h2>
-                <p>by J.D. Salinger</p>
-                <p>256 pages</p>
-                <div class="read-toggle">
-                    <label>Read?</label>
-                    <input type="checkbox" checked>
-                </div>
-                <button class="delete-btn">Delete</button>
-            </div>
-        </div>
-        <div class="book-card">
-            <div class="book-info">
-                <h2>To Kill a Mockingbird</h2>
-                <p>by Harper Lee</p>
-                <p>336 pages</p>
-                <div class="read-toggle">
-                    <label>Read?</label>
-                    <input type="checkbox">
-                </div>
-                <button class="delete-btn">Delete</button>
-            </div>
-        </div>
-        <div class="book-card">
-            <div class="book-info">
-                <h2>The Great Gatsby</h2>
-                <p>by F. Scott Fitzgerald</p>
-                <p>180 pages</p>
-                <div class="read-toggle">
-                    <label>Read?</label>
-                    <input type="checkbox" checked>
-                </div>
-                <button class="delete-btn">Delete</button>
-            </div>
-        </div>
-        <div class="book-card">
-            <div class="book-info">
-                <h2>Pride and Prejudice</h2>
-                <p>by Jane Austen</p>
-                <p>432 pages</p>
-                <div class="read-toggle">
-                    <label>Read?</label>
-                    <input type="checkbox">
-                </div>
-                <button class="delete-btn">Delete</button>
-            </div>
-        </div>
-        <div class="book-card">
-            <div class="book-info">
-                <h2>Pride and Prejudice</h2>
-                <p>by Jane Austen</p>
-                <p>432 pages</p>
-                <div class="read-toggle">
-                    <label>Read?</label>
-                    <input type="checkbox">
-                </div>
-                <button class="delete-btn">Delete</button>
-            </div>
-        </div>
     </main>
     
     <script src="script.js"></script>
+    <script>
+        addBookToLibrary("The Hitchhiker's Guide to the Galaxy", "Douglas Adams", 224, true);
+        addBookToLibrary("1984", "George Orwell", 328, false);
+        addBookToLibrary("The Hobbit", "J.R.R. Tolkien", 310, true);
+    </script>
 </body>
 </html>
